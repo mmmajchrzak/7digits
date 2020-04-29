@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zad5</title>
+</head>
+<body>
+<div id="strona">
+    <h1>Pobieranie danych</h1>
+    <form id="form">
+        Pierwsza liczba <input type="number" id="one" min="-9" max="9"><br>
+        Druga liczba <input type="number" id="two" min="-9" max="9"><br>
+        Trzecia liczba <input type="number" id="three" min="-9" max="9"><br>
+        Czwarta liczba <input type="number" id="four" min="-9" max="9"><br>
+        Piąta liczba <input type="number" id="five" min="-9" max="9"><br>
+        Szósta liczba <input type="number" id="six" min="-9" max="9"><br>
+        Siódma liczba <input type="number" id="seven" min="-9" max="9"><br>
+    </form>
+    <input type="submit" onclick="maximum()" value="Sprawdź">
+    <div id="result"></div>
+
+
+</div>
+<script>
+    function maximum() {
+
+        var one = document.getElementById("one");
+        var two = document.getElementById("two");
+        var three = document.getElementById("three");
+        var four = document.getElementById("four");
+        var five = document.getElementById("five");
+        var six = document.getElementById("six");
+        var seven = document.getElementById("seven");
+
+
+        var array = [one, two, three, four, five, six, seven];
+        var max = array[0];
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] < max) {
+                max = array[i];
+            }
+        }
+
+        result.innerHTML = max.value;
+
+    }
+
+
+</script>
+
+</body>
+</html>
